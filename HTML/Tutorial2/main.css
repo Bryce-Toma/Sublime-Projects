@@ -1,0 +1,70 @@
+/*
+* CSS uses the same "block comment" syntax as the C-like languages
+* - you start a comment with. However, CSS is missing the "line comment"
+* syntax that those languages have, where everything from // to the end
+* of the line is commented out.
+*/
+
+/*And this is how it basically works
+* You have a selector which is where we take up something we're going to add style to (eg. body)
+* And then you have a rule
+* The selector basically has brackets and anything within those brackets gets applied to the selector so the rule 
+* So for the rule you have the property that you want to change and the value you want to give it 
+*/
+
+body { /*selector*/
+	background:#999; /*rule: property + value;*/
+	/*So we picked "body" so now in ur HTML file, the body will get a background of 999 (gray)*/
+	/*We haven't attached it to the to the pages. Two ways to get style to the page:
+	*	1) Add <style> tag to HTML file.
+	*	2) For multiple applications of same style, put into separate fle (like this)
+	*/
+	font-family: arial;
+}
+
+/*Can change the style of multiple page elements*/
+h1, h2, li {
+	color: #666; /*If go to #000 you're at black and #999 you're at a gray*/
+}
+
+/*change color of links*/
+a{
+	color: green;
+}
+
+/*change background and color of paragraphs*/
+p{ 
+	background: #555;
+	color: red;
+	padding: 10px; /*puts 10px padding on all sides*/ 
+	/*if you do one value it applies to all sides*/
+	padding: 10px 0px; /*first#: top-bottom second#:left-right*/
+	/*can put padding on all sides*/
+	padding: 10px 10px 0px 0px; /* Top Right Bottom Left (clockwise)*/
+}
+
+/*Rule: targetting class secondary*/
+.secondary{ /*"." means I'm looking for a  class*/
+/*What I put in here will override what I put into the previous lines*/
+	background: none;
+	color: #777;
+} /*Class makes things more specific*/
+
+/*Any thin with a parapgraph gets the p selector and anything with a class secondary gets .secondary selector*/
+/*Even if we put secondary before -- usually what happens by the wat with CSS rules is what comes after is going to override*/
+p{ 
+	color: white; /*This overrides what is called before and that why it's called cascading style sheets -- it cascades and nyou can override it as you move on*/
+}
+
+/*As you'll notice the class does not get overridden because class is considered more specific.*/
+/*Classes can apply to multiple things. It can apply to anything you add the class to*/
+
+/*Another way to change specific things beseides classes is with ID*/
+
+#special {
+	background: purple;
+	color: white;
+}
+
+/*Only one thing on the page can be used as special but as many thins can be called secondary as you want*/
+/*Usually you want to class things more than youy want to ID things, ID is very specfic, you never know for sure if there is going to be one*/

@@ -1,0 +1,51 @@
+<!-- Web Development Tutorial for Beginners (#2) - How to build webpages with HTML & CSS -->
+<!-- Taken and modified from the last tutorial-->
+<!doctype html> <!--This tag is for every HTML page that just declares that the document type it HTML, esp. HTML 5-->
+<!--tells browser we are working with an HTML5 page -->
+<html>
+
+	<head>
+		<title>My Webpage</title>
+
+		<!--Method #1 of Style here
+
+		<style type = "text/css">
+			body{
+				background: red;
+			}
+		</style>
+
+		Method #1 End-->
+
+		<!--Method #2 of Style here -->
+
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<!--IMOPORTANT: if your main.css file is in the same directory as your index.html file, then href = "main.css"
+		You add "style/main.css" because it's a good idea to keep styles in their own directory. -->
+		<!--Can also leave out type="text/css, some older browser might need that -->
+		<!--Now add this link to each page and these pages will get the same styles as specified in main.css -->
+
+
+		<!-- Method #2 End -->
+
+
+	</head>
+
+	<body>
+		<h1>My Website</h1>
+		<ul> <!-- unordered list that link to other content -->
+			<li>Home</li>
+			<li><a href="page2.html">page 2</a></li>
+			<li><a href="page3.html">page 3</a></li>
+		</ul>
+		<h2>This is my homepage</h2>
+		<p>And all of my homepage content</p>
+	</body>	
+
+</html>
+		
+<!-- However while this works and we can navigate between pages, there is no style. -->
+<!-- now we're going to add style to the webpage -->
+<!-- saved a file called main.css and what a CSS stylesheet is how we are going to styling -->
+
+
